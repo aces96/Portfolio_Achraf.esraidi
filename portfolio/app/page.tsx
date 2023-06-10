@@ -36,13 +36,16 @@ export default function Home() {
             </div>
         </div>
 
-        <div className='h-80 w-full flex flex-col justify-center'>
+        <div className='h-80 w-full flex flex-col justify-center motion-safe:animate-fadeIn'>
           <div className='flex flex-row mb-5'>
               <h1 className='text-7xl '>
                   Hi i'm
               </h1>
               <h1 className='text-7xl ml-6 text-green-500'>
                   Achraf Esraidi
+              </h1>
+              <h1 className='text-7xl '>
+                  ,
               </h1>
           </div>
           <h1 className='text-7xl mb-5'>
