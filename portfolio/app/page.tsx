@@ -213,6 +213,131 @@ export default function Home() {
 
         </div>
 
+        <div className='h-12 w-full mb-16  flex flex-row justify-start'>
+            <div className='w-36 h-full border-2 border-zinc-500 rounded-2xl flex flex-row items-center justify-center'>
+                <Image className='mr-2' alt='homeIcon' src="/skills.png" width={20} height={20}/>
+                <h5>
+                  Skills
+                </h5>
+            </div>
+        </div>
+
+        <div className='h-full w-full grid grid-cols-4 gap-8'>
+          <m.div
+          initial={{y: '30%'}}
+          whileInView={{y: "0%"}}
+          transition={{duration: 0.7}}
+          className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
+            <Image alt='javascriptIcon' src="/javascriptIcon.svg" height={50} width={50}/>
+            <h3 className='text-xl mt-3'>
+              Javascript
+            </h3>
+            <h3 className='text-2xl text-green-500 mt-2'>
+              80%
+            </h3>
+          </m.div>
+
+          <m.div
+          initial={{y: '30%'}}
+          whileInView={{y: "0%"}}
+          transition={{duration: 0.7}}
+          className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
+            <Image alt='javascriptIcon' src="/nodeIcon.svg" height={50} width={50}/>
+            <h3 className='text-xl mt-3'>
+              Nodejs
+            </h3>
+            <h3 className='text-2xl text-green-500 mt-2'>
+              75%
+            </h3>
+          </m.div>
+
+          <m.div
+          initial={{y: '30%'}}
+          whileInView={{y: "0%"}}
+          transition={{duration: 0.7}}
+          className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
+            <Image alt='javascriptIcon' src="/reactIcon.svg" height={50} width={50}/>
+            <h3 className='text-xl mt-3'>
+              React
+            </h3>
+            <h3 className='text-2xl text-green-500 mt-2'>
+              80%
+            </h3>
+          </m.div>
+
+          <m.div
+          initial={{y: '30%'}}
+          whileInView={{y: "0%"}}
+          transition={{duration: 0.7}}
+          className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
+            <Image alt='javascriptIcon' src="/nextjsIcon.svg" height={50} width={50}/>
+            <h3 className='text-xl mt-3'>
+              Nextjs
+            </h3>
+            <h3 className='text-2xl text-green-500 mt-2'>
+              70%
+            </h3>
+          </m.div>
+
+          <m.div
+          initial={{y: '30%'}}
+          whileInView={{y: "0%"}}
+          transition={{duration: 0.7}}
+          className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
+            <Image alt='javascriptIcon' src="/reduxIcon.svg" height={50} width={50}/>
+            <h3 className='text-xl mt-3'>
+              Redux
+            </h3>
+            <h3 className='text-2xl text-green-500 mt-2'>
+              85%
+            </h3>
+          </m.div>
+
+          <m.div
+          initial={{y: '30%'}}
+          whileInView={{y: "0%"}}
+          transition={{duration: 0.7}}
+          className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
+            <Image alt='javascriptIcon' src="/phpIcon.svg" height={50} width={50}/>
+            <h3 className='text-xl mt-3'>
+              PHP
+            </h3>
+            <h3 className='text-2xl text-green-500 mt-2'>
+              65%
+            </h3>
+          </m.div>
+
+          <m.div
+          initial={{y: '30%'}}
+          whileInView={{y: "0%"}}
+          transition={{duration: 0.7}}
+          className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
+            <Image alt='javascriptIcon' src="/mongodbIcon.svg" height={50} width={50}/>
+            <h3 className='text-xl mt-3'>
+              Mongodb
+            </h3>
+            <h3 className='text-2xl text-green-500 mt-2'>
+              85%
+            </h3>
+          </m.div>
+
+          <m.div
+          initial={{y: '30%'}}
+          whileInView={{y: "0%"}}
+          transition={{duration: 0.7}}
+          className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
+            <Image alt='javascriptIcon' src="/mysqlIcon.svg" height={50} width={50}/>
+            <h3 className='text-xl mt-3'>
+              Mysql
+            </h3>
+            <h3 className='text-2xl text-green-500 mt-2'>
+              75%
+            </h3>
+          </m.div>
+
+        </div>
+        
+
 
 
       </div>
