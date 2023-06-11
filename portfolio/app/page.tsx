@@ -1,4 +1,6 @@
+"use client"
 import Image from 'next/image'
+import {motion as m} from 'framer-motion'
 
 export default function Home() {
   return (
@@ -36,26 +38,30 @@ export default function Home() {
             </div>
         </div>
 
-        <div className='h-80 w-full flex flex-col justify-center motion-safe:animate-fadeIn'>
+        <m.div
+        initial={{x:"100%"}}
+        whileInView={{x: '0%'}}
+        transition={{duration: 0.7}}
+        className='h-80 w-full flex flex-col justify-center'>
           <div className='flex flex-row mb-5'>
-              <h1 className='text-7xl '>
-                  Hi i'm
-              </h1>
-              <h1 className='text-7xl ml-6 text-green-500'>
-                  Achraf Esraidi
-              </h1>
-              <h1 className='text-7xl '>
-                  ,
-              </h1>
+                <h1 className='text-7xl '>
+                    Hi i'm
+                </h1>
+                <h1 className='text-7xl ml-6 text-green-500'>
+                    Achraf Esraidi
+                </h1>
+                <h1 className='text-7xl '>
+                    ,
+                </h1>
           </div>
-          <h1 className='text-7xl mb-5'>
-              Fullstack Developer
-          </h1>
+              <h1 className='text-7xl mb-5'>
+                  Fullstack Developer
+              </h1>
 
           <h5 className='text-zinc-500 text-lg'>
               i build modern websites, mobile applications using latest web technologies.
           </h5>
-        </div>
+        </m.div>
       </div>
 
     </main>
