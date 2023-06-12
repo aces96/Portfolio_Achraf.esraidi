@@ -53,7 +53,10 @@ export default function Home() {
           }
 
           if(window.Email){
-            window.Email.send(config).then(()=>{
+            window.Email.send(config).then((e)=>{
+              console.log('====================================');
+              console.log(e);
+              console.log('====================================');
               alert('message sent')
             })
           }
