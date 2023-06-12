@@ -3,8 +3,61 @@ import Image from 'next/image'
 import {motion as m} from 'framer-motion'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import {useRef, useState} from 'react';
+import { Resend } from 'resend';
+
+
+
+
+
+
 
 export default function Home() {
+  const resend = new Resend('re_FaujChwC_BpuGPNyYvkr84DUp6u7iSpSo');
+
+
+  const ref = useRef<null | HTMLDivElement>(null);
+  const [fullname,setFullname] = useState('')
+  const [email,setEmail] = useState('')
+  const [message,setMessage] = useState('')
+  const [filledName, setFilledName] = useState(true)
+  const [filledEmail, setFilledEmail] = useState(true)
+  const [filledMessage, setFilledMessage] = useState(true)
+
+    const handleClick = ()=>{
+        ref.current?.scrollIntoView({behavior: 'smooth'});
+    }
+
+    const handleSend = async()=>{
+
+      if(fullname.length < 1){
+        setFilledName(false)
+      }
+
+      if(email.length < 1){
+        setFilledEmail(false)
+      }
+
+      if(message.length < 1){
+        setFilledMessage(false)
+      }
+
+
+      if(filledEmail && filledMessage && filledName){
+          const config = {
+            Username: 'frussefeiffedda-4738@yopmail.com',
+            Password: 'EE597DC002B587ED1B5427486AFB35DC5E0F',
+            Host: "smtp.elasticemail.com",
+            Port: 2525,
+            To : 'them@website.com',
+            From : "you@isp.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+          }
+      }
+    }
+
+
   return (
     <main className="flex flex-row justify-between h-full bg-zinc-800	">
       <div className='w-80 h-screen  flex items-center justify-center ml-5'>
@@ -27,6 +80,10 @@ export default function Home() {
                   <Image alt='githubIcon' src="/githubIcon.svg" color='grey' width={28} height={28}/>
               </a>
             </div>
+
+            <button onClick={handleClick} className='h-12 text-white hover:text-black w-56 rounded-2xl border-2 border-green-500 bg-transparent hover:bg-green-400 mt-8'>
+                Contact me
+            </button>
         </div>
       </div>
 
@@ -346,7 +403,7 @@ export default function Home() {
             </div>
         </div>
 
-        <div className='w-full h-full mt-16 mb-16 flex flex-col items-start'>
+        <div ref={ref} className='w-full h-full mt-16 mb-16 flex flex-col items-start'>
             <div className='flex flex-row'>
                 <h2 className='text-6xl '>
                     Contact 
@@ -359,7 +416,7 @@ export default function Home() {
                 </h2>
             </div>
 
-            <div className='h-full w-full flex flex-col mt-16'>
+            <div className='h-full w-11/12 flex flex-col mt-16'>
                 <div className='h-22 w-11/12 flex flex-row'>
                   <div className='h-full w-6/12  flex flex-col items-start'>
                       <div className='h-6 w-full  flex flex-row items-start'>
@@ -370,11 +427,16 @@ export default function Home() {
                           *
                         </p>
                       </div>
-                      <input placeholder='Your Full Name' type='text' className='h-10 w-11/12 bg-transparent border-2 border-zinc-500 focus:border-green-500 focus:outline-none text-white .placeholder-zinc-500 mt-2'/>
+                      <input onChange={(e)=>{
+                        setFullname(e.target.value)
+                        console.log(fullname)
+                      }} placeholder='Your Full Name' type='text' className='h-10 w-11/12 bg-transparent border-2 border-zinc-500 focus:border-green-500 focus:outline-none text-white .placeholder-zinc-500 mt-2'/>
 
-                      <p className='text-base text-red-600 mt-3'>
+                      {!filledName &&
+                        <p className='text-base text-red-600 mt-3'>
                         Please fill out this field.
                       </p>
+                      }
 
 
                   </div>
@@ -388,16 +450,47 @@ export default function Home() {
                           *
                         </p>
                       </div>
-                      <input placeholder='Your Email' type='text' className='h-10 w-11/12 bg-transparent border-2 border-zinc-500 focus:border-green-500 focus:outline-none text-white .placeholder-zinc-500 mt-2'/>
+                      <input onChange={(e)=>{
+                        setEmail(e.target.value)
+                      }} placeholder='Your Email' type='text' className='h-10 w-11/12 bg-transparent border-2 border-zinc-500 focus:border-green-500 focus:outline-none text-white .placeholder-zinc-500 mt-2'/>
 
-                      <p className='text-base text-red-600 mt-3'>
+                      {!filledEmail &&
+                        <p className='text-base text-red-600 mt-3'>
                         Please fill out this field.
-                      </p>
+                        </p>
+                      }
 
 
                   </div>
 
                 </div>
+
+                <div className='h-40 w-full  flex flex-col items-start mt-8'>
+                      <div className='h-6 w-full  flex flex-row items-start'>
+                        <p className='text-base'>
+                          Message 
+                        </p>
+                        <p className='text-red-500 ml-2'>
+                          *
+                        </p>
+                      </div>
+                      <input onChange={(e)=>{
+                        setMessage(e.target.value)
+                      }} placeholder='Your Message' type='text' className='h-full w-11/12 bg-transparent border-2 border-zinc-500 focus:border-green-500 focus:outline-none text-white .placeholder-zinc-500 mt-2'/>
+
+                      {!filledMessage &&
+                        <p className='text-base text-red-600 mt-3'>
+                          Please fill out this field.
+                        </p>
+                      }
+
+
+                </div>
+
+
+                <button onClick={handleSend} className='h-12 text-white hover:text-black w-56 rounded-2xl border-2 border-green-500 bg-transparent hover:bg-green-400 mt-8'>
+                   SEND MESSAGE
+                </button>
             </div>
         </div>
         
