@@ -26,5 +26,8 @@
     "resend": "^0.15.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/react-vertical-timeline-component": "^3.3.3"
   }
 }
