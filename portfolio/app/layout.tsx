@@ -17,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
-      <Script src="https://smtpjs.com/v3/smtp.js" />
+      <Script onLoad={()=>{
+        console.log('loaded')
+      }} src="https://smtpjs.com/v3/smtp.js" />
     </html>
   )
 }
