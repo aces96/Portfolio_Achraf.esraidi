@@ -45,14 +45,17 @@ export default function Home() {
 
       if(filledEmail && filledMessage && filledName){
           const config = {
-            Username: 'frussefeiffedda-4738@yopmail.com',
-            Password: 'EE597DC002B587ED1B5427486AFB35DC5E0F',
-            Host: "smtp.elasticemail.com",
-            Port: 2525,
-            To : 'them@website.com',
-            From : "you@isp.com",
+            SecureToken: "0f0539ee-371f-4a03-982c-0c429b50531b",
+            To : 'esraidi12@gmail.com',
+            From : "esraidi12@gmail.com",
             Subject : "This is the subject",
             Body : "And this is the body"
+          }
+
+          if(window.Email){
+            window.Email.send(config).then(()=>{
+              alert('message sent')
+            })
           }
       }
     }
