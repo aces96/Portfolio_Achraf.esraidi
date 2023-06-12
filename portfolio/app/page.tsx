@@ -179,7 +179,7 @@ export default function Home() {
             </div>
 
             <m.div
-            initial={{y: "40%"}}
+            initial={{y: "30%"}}
             whileInView={{y: '0%'}}
             transition={{duration: 0.6}}
             className='w-10/12 h-40 border-2 border-zinc-500 hover:border-green-500 mt-10 rounded-2xl flex flex-col items-center justify-center'>
@@ -196,7 +196,7 @@ export default function Home() {
             </m.div>
 
             <m.div
-            initial={{y: "40%"}}
+            initial={{y: "30%"}}
             whileInView={{y: '0%'}}
             transition={{duration: 0.6}}
             className='w-10/12 h-40 border-2 border-zinc-500 hover:border-green-500 mt-10 rounded-2xl flex flex-col items-center justify-center'>
@@ -335,6 +335,70 @@ export default function Home() {
             </h3>
           </m.div>
 
+        </div>
+
+        <div className='h-12 w-full mb-16 mt-16  flex flex-row justify-start'>
+            <div className='w-36 h-full border-2 border-zinc-500 rounded-2xl flex flex-row items-center justify-center'>
+                <Image className='mr-2' alt='homeIcon' src="/emailIcon.png" width={20} height={20}/>
+                <h5>
+                  Contact
+                </h5>
+            </div>
+        </div>
+
+        <div className='w-full h-full mt-16 mb-16 flex flex-col items-start'>
+            <div className='flex flex-row'>
+                <h2 className='text-6xl '>
+                    Contact 
+                </h2>
+                <h2 className='text-6xl text-green-500 ml-3'>
+                    me
+                </h2>
+                <h2 className='text-6xl ml-3'>
+                    !
+                </h2>
+            </div>
+
+            <div className='h-full w-full flex flex-col mt-16'>
+                <div className='h-22 w-11/12 flex flex-row'>
+                  <div className='h-full w-6/12  flex flex-col items-start'>
+                      <div className='h-6 w-full  flex flex-row items-start'>
+                        <p className='text-base'>
+                          Full Name 
+                        </p>
+                        <p className='text-red-500 ml-2'>
+                          *
+                        </p>
+                      </div>
+                      <input placeholder='Your Full Name' type='text' className='h-10 w-11/12 bg-transparent border-2 border-zinc-500 focus:border-green-500 focus:outline-none text-white .placeholder-zinc-500 mt-2'/>
+
+                      <p className='text-base text-red-600 mt-3'>
+                        Please fill out this field.
+                      </p>
+
+
+                  </div>
+
+                  <div className='h-full w-6/12  flex flex-col items-start'>
+                      <div className='h-6 w-full  flex flex-row items-start'>
+                        <p className='text-base'>
+                          Email 
+                        </p>
+                        <p className='text-red-500 ml-2'>
+                          *
+                        </p>
+                      </div>
+                      <input placeholder='Your Email' type='text' className='h-10 w-11/12 bg-transparent border-2 border-zinc-500 focus:border-green-500 focus:outline-none text-white .placeholder-zinc-500 mt-2'/>
+
+                      <p className='text-base text-red-600 mt-3'>
+                        Please fill out this field.
+                      </p>
+
+
+                  </div>
+
+                </div>
+            </div>
         </div>
         
 
