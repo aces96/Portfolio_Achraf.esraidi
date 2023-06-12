@@ -133,7 +133,7 @@ export default function Home() {
 
         <div className='w-full h-full mt-20 mb-16'>
 
-          <VerticalTimeline s>
+          <VerticalTimeline>
               <VerticalTimelineElement contentStyle={{ background: 'rgba(34, 192, 94,0.4)', color: '#fff' }}
                 contentArrowStyle={{ borderRight: '7px solid  rgba(34, 192, 94,0.4)' }}
                 date=""
