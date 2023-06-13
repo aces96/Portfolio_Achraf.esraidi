@@ -16,7 +16,7 @@ export async function POST(request: Request,){
 
         } catch (error) {
             console.log()
-            const res = {message: error.message}
+            const res = {message: "something wrong occured"}
             const myOptions = { status: 400};
             return new Response(JSON.stringify(res), myOptions)
         }
