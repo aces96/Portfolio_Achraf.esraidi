@@ -4,6 +4,10 @@ import {motion as m} from 'framer-motion'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import {useRef, useState} from 'react';
+import { Circles } from  'react-loader-spinner'
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
 
 
 
@@ -21,49 +25,61 @@ export default function Home() {
   const [filledName, setFilledName] = useState(true)
   const [filledEmail, setFilledEmail] = useState(true)
   const [filledMessage, setFilledMessage] = useState(true)
+  const [loading, setLoading] = useState(false)
+
+
+
 
     const handleClick = ()=>{
         ref.current?.scrollIntoView({behavior: 'smooth'});
     }
 
-    // const handleSend = async()=>{
+    const handleSend = async ()=>{
 
-    //   if(fullname.length < 1){
-    //     setFilledName(false)
-    //   }
+      if(fullname.length < 1){
+        setFilledName(false)
+      }
 
-    //   if(email.length < 1){
-    //     setFilledEmail(false)
-    //   }
+      if(email.length < 1){
+        setFilledEmail(false)
+      }
 
-    //   if(message.length < 1){
-    //     setFilledMessage(false)
-    //   }
+      if(message.length < 1){
+        setFilledMessage(false)
+      }
 
 
-    //   if(filledEmail && filledMessage && filledName){
-    //       const config = {
-    //         SecureToken: "0f0539ee-371f-4a03-982c-0c429b50531b",
-    //         To : 'esraidi12@gmail.com',
-    //         From : "esraidi12@gmail.com",
-    //         Subject : "This is the subject",
-    //         Body : "And this is the body"
-    //       }
-
-    //       if(window.Email){
-    //         window.Email.send(config).then((e)=>{
-    //           console.log('====================================');
-    //           console.log(e);
-    //           console.log('====================================');
-    //           alert('message sent')
-    //         })
-    //       }
-    //   }
-    // }
+      if(email.length > 1 && message.length > 1 && fullname.length > 1){
+        setLoading(true)
+        const text = `new message from ${fullname} email: ${email}
+        this is the message:
+        ${message}
+        `
+        await fetch('/api/contact', {
+          method: 'POST',
+          body: JSON.stringify({
+            message: text
+          })
+        }).then((res)=>{
+          toast.success('your message was sent successfully', {
+            position: toast.POSITION.TOP_RIGHT
+          })
+          setLoading(false)
+        }).catch((err)=>{
+          toast.error("something wrong occured please try again later!",{
+            position: toast.POSITION.TOP_RIGHT
+          })
+          setLoading(false)
+        })
+      }
+    }
 
 
   return (
     <main className="h-full flex lg:flex-row  md:flex-col flex-col  lg:justify-between  bg-zinc-800 	">
+      <ToastContainer 
+        theme="dark"
+      />
       <div className='lg:w-80 md:w-full w-full lg:h-screen md:h-96 h-96  flex items-center justify-center lg:ml-5'>
         <div className='lg:w-80 md:w-9/12 lg:fixed md:h-11/12 h-11/12 w-11/12 h-full lg:h-3/5 md:h-full z-10 border-2 border-zinc-500 hover:border-green-500 rounded-3xl  bg-transparent flex flex-col items-center '>
             <Image className='rounded-3xl lg:mt-7 md:mt-4 md:w-32 w-28 mt-5 ' alt='profilImage' src="/profilImg.png" width={170} height={120}/>
@@ -492,8 +508,17 @@ export default function Home() {
                 </div>
 
 
-                <button  className='h-12 text-white hover:text-black w-56 rounded-2xl border-2 border-green-500 bg-transparent hover:bg-green-400 mt-8'>
-                   SEND MESSAGE
+                <button onClick={handleSend}  className='h-12 text-white hover:text-black w-56 rounded-2xl border-2 border-green-500 bg-transparent hover:bg-green-400 mt-8 flex items-center justify-center'>
+                   {loading ? 
+                    
+                    <Circles
+                    height="30"
+                    width="30"
+                    color="white"
+                    ariaLabel="circles-loading"
+                    visible={loading}
+                    />
+                    : "Send Message"}
                 </button>
             </div>
         </div>
