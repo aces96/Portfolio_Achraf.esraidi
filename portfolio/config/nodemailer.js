@@ -1,20 +1,19 @@
 import nodemailer from 'nodemailer'
 
 
-const email = process.env.EMAIL
-const pass = process.env.EMAILPASS
+
 
 
 export const transporter = nodemailer.createTransport({
     service: 'outlook',
     auth: {
-        user: email,
-        pass
+        user: "achrafesraidi@outlook.fr",
+        pass: "achraf12@@.."
     }
 })
 
 
 export const mailOptions = {
-    from: email,
+    from: "achrafesraidi@outlook.fr",
     to: "esraidi12@gmail.com"
 }
