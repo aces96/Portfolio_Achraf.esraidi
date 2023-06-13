@@ -26,40 +26,40 @@ export default function Home() {
         ref.current?.scrollIntoView({behavior: 'smooth'});
     }
 
-    const handleSend = async()=>{
+    // const handleSend = async()=>{
 
-      if(fullname.length < 1){
-        setFilledName(false)
-      }
+    //   if(fullname.length < 1){
+    //     setFilledName(false)
+    //   }
 
-      if(email.length < 1){
-        setFilledEmail(false)
-      }
+    //   if(email.length < 1){
+    //     setFilledEmail(false)
+    //   }
 
-      if(message.length < 1){
-        setFilledMessage(false)
-      }
+    //   if(message.length < 1){
+    //     setFilledMessage(false)
+    //   }
 
 
-      if(filledEmail && filledMessage && filledName){
-          const config = {
-            SecureToken: "0f0539ee-371f-4a03-982c-0c429b50531b",
-            To : 'esraidi12@gmail.com',
-            From : "esraidi12@gmail.com",
-            Subject : "This is the subject",
-            Body : "And this is the body"
-          }
+    //   if(filledEmail && filledMessage && filledName){
+    //       const config = {
+    //         SecureToken: "0f0539ee-371f-4a03-982c-0c429b50531b",
+    //         To : 'esraidi12@gmail.com',
+    //         From : "esraidi12@gmail.com",
+    //         Subject : "This is the subject",
+    //         Body : "And this is the body"
+    //       }
 
-          if(window.Email){
-            window.Email.send(config).then((e)=>{
-              console.log('====================================');
-              console.log(e);
-              console.log('====================================');
-              alert('message sent')
-            })
-          }
-      }
-    }
+    //       if(window.Email){
+    //         window.Email.send(config).then((e)=>{
+    //           console.log('====================================');
+    //           console.log(e);
+    //           console.log('====================================');
+    //           alert('message sent')
+    //         })
+    //       }
+    //   }
+    // }
 
 
   return (
@@ -492,7 +492,7 @@ export default function Home() {
                 </div>
 
 
-                <button onClick={handleSend} className='h-12 text-white hover:text-black w-56 rounded-2xl border-2 border-green-500 bg-transparent hover:bg-green-400 mt-8'>
+                <button  className='h-12 text-white hover:text-black w-56 rounded-2xl border-2 border-green-500 bg-transparent hover:bg-green-400 mt-8'>
                    SEND MESSAGE
                 </button>
             </div>
