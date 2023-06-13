@@ -4,7 +4,6 @@ import {motion as m} from 'framer-motion'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import {useRef, useState} from 'react';
-import { Resend } from 'resend';
 
 
 
@@ -13,7 +12,6 @@ import { Resend } from 'resend';
 
 
 export default function Home() {
-  const resend = new Resend('re_FaujChwC_BpuGPNyYvkr84DUp6u7iSpSo');
 
 
   const ref = useRef<null | HTMLDivElement>(null);
@@ -65,10 +63,10 @@ export default function Home() {
 
 
   return (
-    <main className="flex flex-row justify-between h-full bg-zinc-800	">
-      <div className='w-80 h-screen  flex items-center justify-center ml-5'>
-        <div className='w-80 fixed h-3/5 z-10 border-2 border-zinc-500 hover:border-green-500 rounded-3xl  bg-transparent flex flex-col items-center'>
-            <Image className='rounded-3xl mt-7' alt='profilImage' src="/profilImg.png" width={170} height={120}/>
+    <main className="h-full flex lg:flex-row  md:flex-col flex-col  lg:justify-between  bg-zinc-800 	">
+      <div className='lg:w-80 md:w-full w-full lg:h-screen md:h-96 h-96  flex items-center justify-center lg:ml-5'>
+        <div className='lg:w-80 md:w-9/12 lg:fixed md:h-11/12 h-11/12 w-11/12 h-full lg:h-3/5 md:h-full z-10 border-2 border-zinc-500 hover:border-green-500 rounded-3xl  bg-transparent flex flex-col items-center '>
+            <Image className='rounded-3xl lg:mt-7 md:mt-4 md:w-32 w-28 mt-5 ' alt='profilImage' src="/profilImg.png" width={170} height={120}/>
             <div className='w-full h-14 bg-transparent flex flex-col items-center justify-center'>
                 <h2 className='text-xl font-medium mt-10'>
                   Achraf Esraidi
@@ -79,22 +77,22 @@ export default function Home() {
             </div>
 
             <div className='w-36 h-14 bg-transparent mt-10 flex flex-row items-center justify-between'>
-              <a  href='https://www.linkedin.com/in/achraf-esraidi-7b3196249/' target='_blank' className='w-14 h-14 rounded-full	border-2 border-zinc-500 hover:border-green-500 flex justify-center items-center'>
-                  <Image alt='linkedinIcon' src="/linkedinIcon.svg" color='grey' width={28} height={28}/>
+              <a  href='https://www.linkedin.com/in/achraf-esraidi-7b3196249/' target='_blank' className='lg:w-14 lg:h-14 h:10 w-10 rounded-full	border-2 border-zinc-500 hover:border-green-500 flex justify-center items-center'>
+                  <Image alt='linkedinIcon' src="/linkedinIcon.svg" color='grey' width={26} height={26}/>
               </a>
-              <a  href='https://github.com/aces96' target='_blank' className='w-14 h-14 rounded-full	border-2 border-zinc-500 hover:border-green-500 flex justify-center items-center'>
-                  <Image alt='githubIcon' src="/githubIcon.svg" color='grey' width={28} height={28}/>
+              <a  href='https://github.com/aces96' target='_blank' className='lg:w-14 lg:h-14 h:10 w-10 rounded-full	border-2 border-zinc-500 hover:border-green-500 flex justify-center items-center'>
+                  <Image alt='githubIcon' src="/githubIcon.svg" color='grey' width={26} height={26}/>
               </a>
             </div>
 
-            <button onClick={handleClick} className='h-12 text-white hover:text-black w-56 rounded-2xl border-2 border-green-500 bg-transparent hover:bg-green-400 mt-8'>
+            <button onClick={handleClick} className='lg:h-12  h:10 text-white hover:text-black w-56 rounded-2xl border-2 border-green-500 bg-transparent hover:bg-green-400 lg:mt-8 md:mt-5 mt-5'>
                 Contact me
             </button>
         </div>
       </div>
 
-      <div className='w-8/12 h-full mt-20'>
-        <div className='h-12 w-full  flex flex-row justify-start'>
+      <div className='lg:w-8/12 md:w-full w-full h-full mt-20'>
+        <div className='h-12 w-full  flex flex-row lg:justify-start md:justify-center justify-center'>
             <div className='w-36 h-full border-2 border-zinc-500 rounded-2xl flex flex-row items-center justify-center'>
                 <Image className='mr-2' alt='homeIcon' src="/home.svg" width={20} height={20}/>
                 <h5>
@@ -107,28 +105,28 @@ export default function Home() {
         initial={{y:"20%"}}
         whileInView={{y: '0%'}}
         transition={{duration: 0.7}}
-        className='h-80 w-full flex flex-col justify-center'>
-          <div className='flex flex-row mb-8'>
-                <h1 className='text-7xl '>
+        className='h-80 w-full flex flex-col lg:items-start md:items-center items-center justify-center'>
+          <div className='flex flex-row lg:mb-8 md:mb-5 mb-4'>
+                <h1 className='lg:text-7xl md:text-6xl text-4xl'>
                     Hi i'm
                 </h1>
-                <h1 className='text-7xl ml-6 text-green-500'>
+                <h1 className='lg:text-7xl md:text-6xl text-4xl ml-6 text-green-500'>
                     Achraf Esraidi
                 </h1>
-                <h1 className='text-7xl '>
+                <h1 className='lg:text-7xl md:text-6xl text-4xl '>
                     ,
                 </h1>
           </div>
-              <h1 className='text-7xl mb-8'>
+              <h1 className='lg:text-7xl md:text-6xl text-4xl mb-8'>
                   Fullstack Developer
               </h1>
 
-          <h5 className='text-zinc-500 text-lg'>
+          <h5 className='text-zinc-500 text-center lg:text-start text-lg'>
               i build modern websites, mobile applications using latest web technologies.
           </h5>
         </m.div>
 
-        <div className='h-12 w-full  flex flex-row justify-start'>
+        <div className='h-12 w-full  flex flex-row lg:justify-start md:justify-center justify-center'>
             <div className='w-36 h-full border-2 border-zinc-500 rounded-2xl flex flex-row items-center justify-center'>
                 <Image className='mr-2' alt='homeIcon' src="/resume.svg" width={20} height={20}/>
                 <h5>
@@ -219,7 +217,7 @@ export default function Home() {
           </VerticalTimeline>
         </div>
 
-        <div className='h-12 w-full  flex flex-row justify-start'>
+        <div className='h-12 w-full  flex flex-row lg:justify-start md:justify-center justify-center'>
             <div className='w-36 h-full border-2 border-zinc-500 rounded-2xl flex flex-row items-center justify-center'>
                 <Image className='mr-2' alt='homeIcon' src="/service.png" width={20} height={20}/>
                 <h5>
@@ -228,15 +226,15 @@ export default function Home() {
             </div>
         </div>
 
-        <div className='w-full h-full mt-16 mb-16 flex flex-col items-start'>
+        <div className='w-full h-full lg:mt-16 mt-10 mb-16 flex flex-col lg:items-start md:items-center items-center'>
             <div className=' flex flex-row'>
-              <h2 className='text-7xl'>
+              <h2 className='lg:text-7xl md:text-6xl text-4xl'>
               My
               </h2>
-              <h2 className='text-7xl text-green-500 ml-3'>
+              <h2 className='lg:text-7xl md:text-6xl text-4xl text-green-500 ml-3'>
                     Services
               </h2>
-              <h2 className='text-7xl '>
+              <h2 className='lg:text-7xl md:text-6xl text-4xl'>
                     .
               </h2>
             </div>
@@ -245,14 +243,14 @@ export default function Home() {
             initial={{y: "30%"}}
             whileInView={{y: '0%'}}
             transition={{duration: 0.6}}
-            className='w-10/12 h-40 border-2 border-zinc-500 hover:border-green-500 mt-10 rounded-2xl flex flex-col items-center justify-center'>
+            className='lg:w-10/12 md:w-10/12 w-11/12   h-40 border-2 border-zinc-500 hover:border-green-500 mt-10 rounded-2xl flex flex-col items-center justify-center'>
                 <div className='w-10/12 h-10 flex flex-row items-center justify-between'>
-                    <h5 className='text-2xl'>
+                    <h5 className='lg:text-2xl md:text-2xl text-xl'>
                     Web development
                     </h5>
-                    <Image alt='codeIcon' src='/codeIcon.png' width={30} height={30}/>
+                    <Image alt='codeIcon' src='/codeIcon.png' width={28} height={28}/>
                 </div>
-                <h5 className='text-base text-zinc-400 text-left mt-4'>
+                <h5 className='lg:text-base md:text-base text-xs lg:text-left md:text-center text-center text-zinc-400  mt-4'>
                     i build modern web apps using the latest web technologies.
                     like "Reactjs, Nodejs, Nextjs...""
                 </h5>
@@ -262,21 +260,21 @@ export default function Home() {
             initial={{y: "30%"}}
             whileInView={{y: '0%'}}
             transition={{duration: 0.6}}
-            className='w-10/12 h-40 border-2 border-zinc-500 hover:border-green-500 mt-10 rounded-2xl flex flex-col items-center justify-center'>
+            className='lg:w-10/12 md:w-10/12 w-11/12 h-40 border-2 border-zinc-500 hover:border-green-500 mt-10 rounded-2xl flex flex-col items-center justify-center'>
                 <div className='w-10/12 h-10 flex flex-row items-center justify-between'>
-                    <h5 className='text-2xl'>
+                    <h5 className='lg:text-2xl md:text-2xl text-xl'>
                     Mobile development
                     </h5>
-                    <Image alt='codeIcon' src='/codeIcon.png' width={30} height={30}/>
+                    <Image alt='codeIcon' src='/codeIcon.png' width={28} height={28}/>
                 </div>
-                <h5 className='text-base text-zinc-400 text-left mt-4'>
+                <h5 className='lg:text-base md:text-base text-xs text-zinc-400 md:text-center text-center lg:text-left mt-4'>
                     i build modern mobile applications React Native.
                 </h5>
             </m.div>
 
         </div>
 
-        <div className='h-12 w-full mb-16  flex flex-row justify-start'>
+        <div className='h-12 w-full mb-16  flex flex-row lg:justify-start md:justify-center justify-center'>
             <div className='w-36 h-full border-2 border-zinc-500 rounded-2xl flex flex-row items-center justify-center'>
                 <Image className='mr-2' alt='homeIcon' src="/skills.png" width={20} height={20}/>
                 <h5>
@@ -285,7 +283,7 @@ export default function Home() {
             </div>
         </div>
 
-        <div className='h-full w-full grid grid-cols-4 gap-8'>
+        <div className='h-full w-full grid lg:grid-cols-4 md:place-items-center place-items-center md:grid-cols-3 grid-cols-2  gap-8'>
           <m.div
           initial={{y: '30%'}}
           whileInView={{y: "0%"}}
@@ -400,7 +398,7 @@ export default function Home() {
 
         </div>
 
-        <div className='h-12 w-full mb-16 mt-16  flex flex-row justify-start'>
+        <div className='h-12 w-full mb-16 mt-16  flex flex-row lg:justify-start md:justify-center justify-center'>
             <div className='w-36 h-full border-2 border-zinc-500 rounded-2xl flex flex-row items-center justify-center'>
                 <Image className='mr-2' alt='homeIcon' src="/emailIcon.png" width={20} height={20}/>
                 <h5>
@@ -409,21 +407,21 @@ export default function Home() {
             </div>
         </div>
 
-        <div ref={ref} className='w-full h-full mt-16 mb-16 flex flex-col items-start'>
+        <div ref={ref} className='w-full h-full mt-16 mb-16 flex flex-col lg:items-start md:items-center items-center'>
             <div className='flex flex-row'>
-                <h2 className='text-6xl '>
+                <h2 className='lg:text-6xl md:text-5xl text-4xl '>
                     Contact 
                 </h2>
-                <h2 className='text-6xl text-green-500 ml-3'>
+                <h2 className='lg:text-6xl md:text-5xl text-4xl text-green-500 ml-3'>
                     me
                 </h2>
-                <h2 className='text-6xl ml-3'>
+                <h2 className='lg:text-6xl md:text-5xl text-4xl ml-3'>
                     !
                 </h2>
             </div>
 
             <div className='h-full w-11/12 flex flex-col mt-16'>
-                <div className='h-22 w-11/12 flex flex-row'>
+                <div className='h-22 w-full flex flex-row'>
                   <div className='h-full w-6/12  flex flex-col items-start'>
                       <div className='h-6 w-full  flex flex-row items-start'>
                         <p className='text-base'>
@@ -482,7 +480,7 @@ export default function Home() {
                       </div>
                       <input onChange={(e)=>{
                         setMessage(e.target.value)
-                      }} placeholder='Your Message' type='text' className='h-full w-11/12 bg-transparent border-2 border-zinc-500 focus:border-green-500 focus:outline-none text-white .placeholder-zinc-500 mt-2'/>
+                      }} placeholder='Your Message' type='text' className='h-full w-full bg-transparent border-2 border-zinc-500 focus:border-green-500 focus:outline-none text-white .placeholder-zinc-500 mt-2'/>
 
                       {!filledMessage &&
                         <p className='text-base text-red-600 mt-3'>
