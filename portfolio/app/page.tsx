@@ -84,10 +84,10 @@ export default function Home() {
         <div className='lg:w-80 md:w-9/12 lg:fixed md:h-11/12 h-11/12 w-11/12 h-full lg:h-3/5 md:h-full z-10 border-2 border-zinc-500 hover:border-green-500 rounded-3xl  bg-transparent flex flex-col items-center '>
             <Image className='rounded-3xl lg:mt-7 md:mt-4 md:w-32 w-28 mt-5 ' alt='profilImage' src="/profilImg.png" width={170} height={120}/>
             <div className='w-full h-14 bg-transparent flex flex-col items-center justify-center'>
-                <h2 className='text-xl font-medium mt-10'>
+                <h2 className='text-xl text-white font-medium mt-10'>
                   Achraf Esraidi
                 </h2>
-                <h2 className='text-base font-light mt-2'>
+                <h2 className='text-base text-white font-light mt-2'>
                   esraidi12@gmail.com
                 </h2>
             </div>
@@ -111,7 +111,7 @@ export default function Home() {
         <div className='h-12 w-full  flex flex-row lg:justify-start md:justify-center justify-center'>
             <div className='w-36 h-full border-2 border-zinc-500 rounded-2xl flex flex-row items-center justify-center'>
                 <Image className='mr-2' alt='homeIcon' src="/home.svg" width={20} height={20}/>
-                <h5>
+                <h5 className='text-white'>
                   Introduce
                 </h5>
             </div>
@@ -123,17 +123,17 @@ export default function Home() {
         transition={{duration: 0.7}}
         className='h-80 w-full flex flex-col lg:items-start md:items-center items-center justify-center'>
           <div className='flex flex-row lg:mb-8 md:mb-5 mb-4'>
-                <h1 className='lg:text-7xl md:text-6xl text-4xl'>
+                <h1 className='lg:text-7xl  md:text-6xl text-4xl text-white'>
                     Hi i'm
                 </h1>
                 <h1 className='lg:text-7xl md:text-6xl text-4xl ml-6 text-green-500'>
                     Achraf Esraidi
                 </h1>
-                <h1 className='lg:text-7xl md:text-6xl text-4xl '>
+                <h1 className='lg:text-7xl md:text-6xl text-4xl text-white'>
                     ,
                 </h1>
           </div>
-              <h1 className='lg:text-7xl md:text-6xl text-4xl mb-8'>
+              <h1 className='lg:text-7xl md:text-6xl text-4xl mb-8 text-white'>
                   Fullstack Developer
               </h1>
 
@@ -145,7 +145,7 @@ export default function Home() {
         <div className='h-12 w-full  flex flex-row lg:justify-start md:justify-center justify-center'>
             <div className='w-36 h-full border-2 border-zinc-500 rounded-2xl flex flex-row items-center justify-center'>
                 <Image className='mr-2' alt='homeIcon' src="/resume.svg" width={20} height={20}/>
-                <h5>
+                <h5 className='text-white'>
                   Resume
                 </h5>
             </div>
@@ -236,7 +236,7 @@ export default function Home() {
         <div className='h-12 w-full  flex flex-row lg:justify-start md:justify-center justify-center'>
             <div className='w-36 h-full border-2 border-zinc-500 rounded-2xl flex flex-row items-center justify-center'>
                 <Image className='mr-2' alt='homeIcon' src="/service.png" width={20} height={20}/>
-                <h5>
+                <h5 className='text-white'>
                   Services
                 </h5>
             </div>
@@ -244,13 +244,13 @@ export default function Home() {
 
         <div className='w-full h-full lg:mt-16 mt-10 mb-16 flex flex-col lg:items-start md:items-center items-center'>
             <div className=' flex flex-row'>
-              <h2 className='lg:text-7xl md:text-6xl text-4xl'>
+              <h2 className='lg:text-7xl md:text-6xl text-4xl text-white'>
               My
               </h2>
               <h2 className='lg:text-7xl md:text-6xl text-4xl text-green-500 ml-3'>
                     Services
               </h2>
-              <h2 className='lg:text-7xl md:text-6xl text-4xl'>
+              <h2 className='lg:text-7xl md:text-6xl text-4xl text-white'>
                     .
               </h2>
             </div>
@@ -261,7 +261,7 @@ export default function Home() {
             transition={{duration: 0.6}}
             className='lg:w-10/12 md:w-10/12 w-11/12   h-40 border-2 border-zinc-500 hover:border-green-500 mt-10 rounded-2xl flex flex-col items-center justify-center'>
                 <div className='w-10/12 h-10 flex flex-row items-center justify-between'>
-                    <h5 className='lg:text-2xl md:text-2xl text-xl'>
+                    <h5 className='lg:text-2xl md:text-2xl text-xl text-white'>
                     Web development
                     </h5>
                     <Image alt='codeIcon' src='/codeIcon.png' width={28} height={28}/>
@@ -278,7 +278,7 @@ export default function Home() {
             transition={{duration: 0.6}}
             className='lg:w-10/12 md:w-10/12 w-11/12 h-40 border-2 border-zinc-500 hover:border-green-500 mt-10 rounded-2xl flex flex-col items-center justify-center'>
                 <div className='w-10/12 h-10 flex flex-row items-center justify-between'>
-                    <h5 className='lg:text-2xl md:text-2xl text-xl'>
+                    <h5 className='lg:text-2xl md:text-2xl text-xl text-white'>
                     Mobile development
                     </h5>
                     <Image alt='codeIcon' src='/codeIcon.png' width={28} height={28}/>
@@ -293,7 +293,7 @@ export default function Home() {
         <div className='h-12 w-full mb-16  flex flex-row lg:justify-start md:justify-center justify-center'>
             <div className='w-36 h-full border-2 border-zinc-500 rounded-2xl flex flex-row items-center justify-center'>
                 <Image className='mr-2' alt='homeIcon' src="/skills.png" width={20} height={20}/>
-                <h5>
+                <h5 className='text-white'>
                   Skills
                 </h5>
             </div>
@@ -306,7 +306,7 @@ export default function Home() {
           transition={{duration: 0.7}}
           className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
             <Image alt='javascriptIcon' src="/javascriptIcon.svg" height={50} width={50}/>
-            <h3 className='text-xl mt-3'>
+            <h3 className='text-xl mt-3 text-white'>
               Javascript
             </h3>
             <h3 className='text-2xl text-green-500 mt-2'>
@@ -320,7 +320,7 @@ export default function Home() {
           transition={{duration: 0.7}}
           className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
             <Image alt='javascriptIcon' src="/nodeIcon.svg" height={50} width={50}/>
-            <h3 className='text-xl mt-3'>
+            <h3 className='text-xl mt-3 text-white'>
               Nodejs
             </h3>
             <h3 className='text-2xl text-green-500 mt-2'>
@@ -334,7 +334,7 @@ export default function Home() {
           transition={{duration: 0.7}}
           className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
             <Image alt='javascriptIcon' src="/reactIcon.svg" height={50} width={50}/>
-            <h3 className='text-xl mt-3'>
+            <h3 className='text-xl mt-3 text-white'>
               React
             </h3>
             <h3 className='text-2xl text-green-500 mt-2'>
@@ -348,7 +348,7 @@ export default function Home() {
           transition={{duration: 0.7}}
           className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
             <Image alt='javascriptIcon' src="/nextjsIcon.svg" height={50} width={50}/>
-            <h3 className='text-xl mt-3'>
+            <h3 className='text-xl mt-3 text-white'>
               Nextjs
             </h3>
             <h3 className='text-2xl text-green-500 mt-2'>
@@ -362,7 +362,7 @@ export default function Home() {
           transition={{duration: 0.7}}
           className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
             <Image alt='javascriptIcon' src="/reduxIcon.svg" height={50} width={50}/>
-            <h3 className='text-xl mt-3'>
+            <h3 className='text-xl mt-3 text-white'>
               Redux
             </h3>
             <h3 className='text-2xl text-green-500 mt-2'>
@@ -376,7 +376,7 @@ export default function Home() {
           transition={{duration: 0.7}}
           className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
             <Image alt='javascriptIcon' src="/phpIcon.svg" height={50} width={50}/>
-            <h3 className='text-xl mt-3'>
+            <h3 className='text-xl mt-3 text-white'>
               PHP
             </h3>
             <h3 className='text-2xl text-green-500 mt-2'>
@@ -390,7 +390,7 @@ export default function Home() {
           transition={{duration: 0.7}}
           className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
             <Image alt='javascriptIcon' src="/mongodbIcon.svg" height={50} width={50}/>
-            <h3 className='text-xl mt-3'>
+            <h3 className='text-xl mt-3 text-white'>
               Mongodb
             </h3>
             <h3 className='text-2xl text-green-500 mt-2'>
@@ -404,7 +404,7 @@ export default function Home() {
           transition={{duration: 0.7}}
           className='h-44 w-36 rounded-3xl border-2 border-zinc-500 hover:border-green-500 flex flex-col items-center justify-center'>
             <Image alt='javascriptIcon' src="/mysqlIcon.svg" height={50} width={50}/>
-            <h3 className='text-xl mt-3'>
+            <h3 className='text-xl mt-3 text-white'>
               Mysql
             </h3>
             <h3 className='text-2xl text-green-500 mt-2'>
@@ -417,7 +417,7 @@ export default function Home() {
         <div className='h-12 w-full mb-16 mt-16  flex flex-row lg:justify-start md:justify-center justify-center'>
             <div className='w-36 h-full border-2 border-zinc-500 rounded-2xl flex flex-row items-center justify-center'>
                 <Image className='mr-2' alt='homeIcon' src="/emailIcon.png" width={20} height={20}/>
-                <h5>
+                <h5 className='text-white'>
                   Contact
                 </h5>
             </div>
@@ -425,13 +425,13 @@ export default function Home() {
 
         <div ref={ref} className='w-full h-full mt-16 mb-16 flex flex-col lg:items-start md:items-center items-center'>
             <div className='flex flex-row'>
-                <h2 className='lg:text-6xl md:text-5xl text-4xl '>
+                <h2 className='lg:text-6xl md:text-5xl text-4xl text-white'>
                     Contact 
                 </h2>
                 <h2 className='lg:text-6xl md:text-5xl text-4xl text-green-500 ml-3'>
                     me
                 </h2>
-                <h2 className='lg:text-6xl md:text-5xl text-4xl ml-3'>
+                <h2 className='lg:text-6xl md:text-5xl text-4xl ml-3 text-white'>
                     !
                 </h2>
             </div>
@@ -440,7 +440,7 @@ export default function Home() {
                 <div className='h-22 w-full flex flex-row'>
                   <div className='h-full w-6/12  flex flex-col items-start'>
                       <div className='h-6 w-full  flex flex-row items-start'>
-                        <p className='text-base'>
+                        <p className='text-base text-white'>
                           Full Name 
                         </p>
                         <p className='text-red-500 ml-2'>
@@ -463,7 +463,7 @@ export default function Home() {
 
                   <div className='h-full w-6/12  flex flex-col items-start'>
                       <div className='h-6 w-full  flex flex-row items-start'>
-                        <p className='text-base'>
+                        <p className='text-base text-white'>
                           Email 
                         </p>
                         <p className='text-red-500 ml-2'>
@@ -487,7 +487,7 @@ export default function Home() {
 
                 <div className='h-40 w-full  flex flex-col items-start mt-8'>
                       <div className='h-6 w-full  flex flex-row items-start'>
-                        <p className='text-base'>
+                        <p className='text-base text-white'>
                           Message 
                         </p>
                         <p className='text-red-500 ml-2'>
