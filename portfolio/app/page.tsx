@@ -160,14 +160,14 @@ export default function Home() {
                 iconStyle={{ background: 'white', color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', width: 50, height: 50}}
                 icon={<Image alt='workIcon' src={'/work.svg'} width={40} height={40}/>}
                 className="vertical-timeline-element--work">
-                <h3 className="vertical-timeline-element-title">FullStack Developer</h3>
+                <h3 className="vertical-timeline-element-title">Front-end Developer (Angular/Ionic)</h3>
                 <h4 className="vertical-timeline-element-subtitle">Saphir Systems</h4>
                 <p>
                 Contribution to parts of the Wakil Inwi Money and Barid Bank Mobile projects.
                 Development of user interfaces with Angular.
                 </p>
                   <p className='text-green-500 '>
-                  juillet 2023 - Present
+                  July 2023 - Present
                   </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement contentStyle={{ background: 'rgba(34, 192, 94,0.4)', color: '#fff' }}
@@ -176,7 +176,7 @@ export default function Home() {
                 iconStyle={{ background: 'white', color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', width: 50, height: 50}}
                 icon={<Image alt='workIcon' src={'/work.svg'} width={40} height={40}/>}
                 className="vertical-timeline-element--work">
-                <h3 className="vertical-timeline-element-title">FullStack Developer</h3>
+                <h3 className="vertical-timeline-element-title">FullStack Developer (MERN stack)</h3>
                 <h4 className="vertical-timeline-element-subtitle">Freelance, 'level 1 seller on fiverr'</h4>
                 <p>
                   build modern web apps and mobile application using Nextjs, Nodejs and React Native.
@@ -192,7 +192,7 @@ export default function Home() {
                 iconStyle={{ background: 'white', color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', width: 50, height: 50}}
                 icon={<Image alt='workIcon' src={'/work.svg'} width={40} height={40}/>}
                 className="vertical-timeline-element--work">
-                <h3 className="vertical-timeline-element-title">FullStack Developer</h3>
+                <h3 className="vertical-timeline-element-title">FullStack Developer (MERN stack)</h3>
                 <h4 className="vertical-timeline-element-subtitle">Internship, "Sens-Things"</h4>
                 <p>
                   i had an internship at the end of my second year at youcode school in a startup called "Sens-Things" where i worked on a mobile application using React Native and and NFC technologie it was a great experience where i learned a lot about mobile developement and the NFC technologie.
